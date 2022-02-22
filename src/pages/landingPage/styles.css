@@ -1,0 +1,21 @@
+.LandingPage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+  border: 2px solid #fe4164;
+  max-width: 700px;
+  min-width: 420px;
+  padding: 46px;
+ }
+
+ .LandingPage__text {
+  margin: 10px 20px;
+ }
+
+ .LandingPage__section {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }

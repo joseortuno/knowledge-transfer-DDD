@@ -1,0 +1,591 @@
+{
+  "films": [
+    {
+      "description": "A Star Wars Film",
+      "id": 1,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "George Lucas",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 4,
+        "opening_crawl": "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....",
+        "producer": "Gary Kurtz, Rick McCallum",
+        "release_date": "1977-05-25",
+        "title": "A New Hope",
+        "url": "https://www.swapi.tech/api/films/1"
+      }
+    },
+    {
+      "description": "A Star Wars Film",
+      "id": 2,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "Irvin Kershner",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 5,
+        "opening_crawl": "It is a dark time for the\r\nRebellion. Although the Death\r\nStar has been destroyed,\r\nImperial troops have driven the\r\nRebel forces from their hidden\r\nbase and pursued them across\r\nthe galaxy.\r\n\r\nEvading the dreaded Imperial\r\nStarfleet, a group of freedom\r\nfighters led by Luke Skywalker\r\nhas established a new secret\r\nbase on the remote ice world\r\nof Hoth.\r\n\r\nThe evil lord Darth Vader,\r\nobsessed with finding young\r\nSkywalker, has dispatched\r\nthousands of remote probes into\r\nthe far reaches of space....",
+        "producer": "Gary Kurtz, Rick McCallum",
+        "release_date": "1980-05-17",
+        "title": "The Empire Strikes Back",
+        "url": "https://www.swapi.tech/api/films/2"
+      }
+    },
+    {
+      "description": "A Star Wars Film",
+      "id": 3,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "Richard Marquand",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 6,
+        "opening_crawl": "Luke Skywalker has returned to\r\nhis home planet of Tatooine in\r\nan attempt to rescue his\r\nfriend Han Solo from the\r\nclutches of the vile gangster\r\nJabba the Hutt.\r\n\r\nLittle does Luke know that the\r\nGALACTIC EMPIRE has secretly\r\nbegun construction on a new\r\narmored space station even\r\nmore powerful than the first\r\ndreaded Death Star.\r\n\r\nWhen completed, this ultimate\r\nweapon will spell certain doom\r\nfor the small band of rebels\r\nstruggling to restore freedom\r\nto the galaxy...",
+        "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
+        "release_date": "1983-05-25",
+        "title": "Return of the Jedi",
+        "url": "https://www.swapi.tech/api/films/3"
+      }
+    },
+    {
+      "description": "A Star Wars Film",
+      "id": 4,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "George Lucas",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 1,
+        "opening_crawl": "Turmoil has engulfed the\r\nGalactic Republic. The taxation\r\nof trade routes to outlying star\r\nsystems is in dispute.\r\n\r\nHoping to resolve the matter\r\nwith a blockade of deadly\r\nbattleships, the greedy Trade\r\nFederation has stopped all\r\nshipping to the small planet\r\nof Naboo.\r\n\r\nWhile the Congress of the\r\nRepublic endlessly debates\r\nthis alarming chain of events,\r\nthe Supreme Chancellor has\r\nsecretly dispatched two Jedi\r\nKnights, the guardians of\r\npeace and justice in the\r\ngalaxy, to settle the conflict....",
+        "producer": "Rick McCallum",
+        "release_date": "1999-05-19",
+        "title": "The Phantom Menace",
+        "url": "https://www.swapi.tech/api/films/4"
+      }
+    },
+    {
+      "description": "A Star Wars Film",
+      "id": 5,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "George Lucas",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 2,
+        "opening_crawl": "There is unrest in the Galactic\r\nSenate. Several thousand solar\r\nsystems have declared their\r\nintentions to leave the Republic.\r\n\r\nThis separatist movement,\r\nunder the leadership of the\r\nmysterious Count Dooku, has\r\nmade it difficult for the limited\r\nnumber of Jedi Knights to maintain \r\npeace and order in the galaxy.\r\n\r\nSenator Amidala, the former\r\nQueen of Naboo, is returning\r\nto the Galactic Senate to vote\r\non the critical issue of creating\r\nan ARMY OF THE REPUBLIC\r\nto assist the overwhelmed\r\nJedi....",
+        "producer": "Rick McCallum",
+        "release_date": "2002-05-16",
+        "title": "Attack of the Clones",
+        "url": "https://www.swapi.tech/api/films/5"
+      }
+    },
+    {
+      "description": "A Star Wars Film",
+      "id": 6,
+      "properties": {
+        "created": "2022-02-19T22:36:51.269Z",
+        "director": "George Lucas",
+        "edited": "2022-02-19T22:36:51.269Z",
+        "episode_id": 3,
+        "opening_crawl": "War! The Republic is crumbling\r\nunder attacks by the ruthless\r\nSith Lord, Count Dooku.\r\nThere are heroes on both sides.\r\nEvil is everywhere.\r\n\r\nIn a stunning move, the\r\nfiendish droid leader, General\r\nGrievous, has swept into the\r\nRepublic capital and kidnapped\r\nChancellor Palpatine, leader of\r\nthe Galactic Senate.\r\n\r\nAs the Separatist Droid Army\r\nattempts to flee the besieged\r\ncapital with their valuable\r\nhostage, two Jedi Knights lead a\r\ndesperate mission to rescue the\r\ncaptive Chancellor....",
+        "producer": "Rick McCallum",
+        "release_date": "2005-05-19",
+        "title": "Revenge of the Sith",
+        "url": "https://www.swapi.tech/api/films/6"
+      }
+    }
+  ],
+  "people": [
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 1,
+      "properties": {
+        "birth_year": "19BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "blue",
+        "gender": "male",
+        "hair_color": "blond",
+        "height": "172",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "mass": "77",
+        "name": "Luke Skywalker",
+        "skin_color": "fair",
+        "url": "https://www.swapi.tech/api/people/1"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 2,
+      "properties": {
+        "birth_year": "112BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "yellow",
+        "gender": "n/a",
+        "hair_color": "n/a",
+        "height": "167",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "mass": "75",
+        "name": "C-3PO",
+        "skin_color": "gold",
+        "url": "https://www.swapi.tech/api/people/2"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 3,
+      "properties": {
+        "birth_year": "33BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "red",
+        "gender": "n/a",
+        "hair_color": "n/a",
+        "height": "96",
+        "homeworld": "https://www.swapi.tech/api/planets/8",
+        "mass": "32",
+        "name": "R2-D2",
+        "skin_color": "white, blue",
+        "url": "https://www.swapi.tech/api/people/3"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 4,
+      "properties": {
+        "birth_year": "41.9BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "yellow",
+        "gender": "male",
+        "hair_color": "none",
+        "height": "202",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "mass": "136",
+        "name": "Darth Vader",
+        "skin_color": "white",
+        "url": "https://www.swapi.tech/api/people/4"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 5,
+      "properties": {
+        "birth_year": "19BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "female",
+        "hair_color": "brown",
+        "height": "150",
+        "homeworld": "https://www.swapi.tech/api/planets/2",
+        "mass": "49",
+        "name": "Leia Organa",
+        "skin_color": "light",
+        "url": "https://www.swapi.tech/api/people/5"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 6,
+      "properties": {
+        "birth_year": "52BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "blue",
+        "gender": "male",
+        "hair_color": "brown, grey",
+        "height": "178",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "mass": "120",
+        "name": "Owen Lars",
+        "skin_color": "light",
+        "url": "https://www.swapi.tech/api/people/6"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 7,
+      "properties": {
+        "birth_year": "57BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "blue-gray",
+        "gender": "male",
+        "hair_color": "auburn, white",
+        "height": "182",
+        "homeworld": "https://www.swapi.tech/api/planets/20",
+        "mass": "77",
+        "name": "Obi-Wan Kenobi",
+        "skin_color": "fair",
+        "url": "https://www.swapi.tech/api/people/10"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 8,
+      "properties": {
+        "birth_year": "41.9BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "blue",
+        "gender": "male",
+        "hair_color": "blond",
+        "height": "188",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "mass": "84",
+        "name": "Anakin Skywalker",
+        "skin_color": "fair",
+        "url": "https://www.swapi.tech/api/people/11"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 9,
+      "properties": {
+        "birth_year": "200BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "blue",
+        "gender": "male",
+        "hair_color": "brown",
+        "height": "228",
+        "homeworld": "https://www.swapi.tech/api/planets/14",
+        "mass": "112",
+        "name": "Chewbacca",
+        "skin_color": "unknown",
+        "url": "https://www.swapi.tech/api/people/13"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 10,
+      "properties": {
+        "birth_year": "29BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "male",
+        "hair_color": "brown",
+        "height": "180",
+        "homeworld": "https://www.swapi.tech/api/planets/22",
+        "mass": "80",
+        "name": "Han Solo",
+        "skin_color": "fair",
+        "url": "https://www.swapi.tech/api/people/14"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 11,
+      "properties": {
+        "birth_year": "896BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "male",
+        "hair_color": "white",
+        "height": "66",
+        "homeworld": "https://www.swapi.tech/api/planets/28",
+        "mass": "17",
+        "name": "Yoda",
+        "skin_color": "green",
+        "url": "https://www.swapi.tech/api/people/20"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 12,
+      "properties": {
+        "birth_year": "31.5BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "male",
+        "hair_color": "black",
+        "height": "183",
+        "homeworld": "https://www.swapi.tech/api/planets/10",
+        "mass": "78.2",
+        "name": "Boba Fett",
+        "skin_color": "fair",
+        "url": "https://www.swapi.tech/api/people/22"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 13,
+      "properties": {
+        "birth_year": "31BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "male",
+        "hair_color": "black",
+        "height": "177",
+        "homeworld": "https://www.swapi.tech/api/planets/30",
+        "mass": "79",
+        "name": "Lando Calrissian",
+        "skin_color": "dark",
+        "url": "https://www.swapi.tech/api/people/25"
+      }
+    },
+    {
+      "description": "A person within the Star Wars universe",
+      "id": 14,
+      "properties": {
+        "birth_year": "46BBY",
+        "created": "2022-02-19T22:36:51.281Z",
+        "edited": "2022-02-19T22:36:51.281Z",
+        "eye_color": "brown",
+        "gender": "female",
+        "hair_color": "brown",
+        "height": "185",
+        "homeworld": "https://www.swapi.tech/api/planets/8",
+        "mass": "45",
+        "name": "Padmé Amidala",
+        "skin_color": "light",
+        "url": "https://www.swapi.tech/api/people/35"
+      }
+    }
+  ],
+  "planets": [
+    {
+      "description": "A planet.",
+      "id": 1,
+      "properties": {
+        "climate": "arid",
+        "created": "2022-02-19T22:36:51.283Z",
+        "diameter": "10465",
+        "edited": "2022-02-19T22:36:51.283Z",
+        "gravity": "1 standard",
+        "name": "Tatooine",
+        "orbital_period": "304",
+        "population": "200000",
+        "rotation_period": "23",
+        "surface_water": "1",
+        "terrain": "desert",
+        "url": "https://www.swapi.tech/api/planets/1"
+      }
+    },
+    {
+      "description": "A planet.",
+      "id": 2,
+      "properties": {
+        "climate": "temperate",
+        "created": "2022-02-19T22:36:51.283Z",
+        "diameter": "12500",
+        "edited": "2022-02-19T22:36:51.283Z",
+        "gravity": "1 standard",
+        "name": "Alderaan",
+        "orbital_period": "364",
+        "population": "2000000000",
+        "rotation_period": "24",
+        "surface_water": "40",
+        "terrain": "grasslands, mountains",
+        "url": "https://www.swapi.tech/api/planets/2"
+      }
+    },
+    {
+      "description": "A planet.",
+      "id": 3,
+      "properties": {
+        "climate": "temperate, tropical",
+        "created": "2022-02-19T22:36:51.283Z",
+        "diameter": "10200",
+        "edited": "2022-02-19T22:36:51.283Z",
+        "gravity": "1 standard",
+        "name": "Yavin IV",
+        "orbital_period": "4818",
+        "population": "1000",
+        "rotation_period": "24",
+        "surface_water": "8",
+        "terrain": "jungle, rainforests",
+        "url": "https://www.swapi.tech/api/planets/3"
+      }
+    },
+    {
+      "description": "A planet.",
+      "id": 4,
+      "properties": {
+        "climate": "frozen",
+        "created": "2022-02-19T22:36:51.283Z",
+        "diameter": "7200",
+        "edited": "2022-02-19T22:36:51.283Z",
+        "gravity": "1.1 standard",
+        "name": "Hoth",
+        "orbital_period": "549",
+        "population": "unknown",
+        "rotation_period": "23",
+        "surface_water": "100",
+        "terrain": "tundra, ice caves, mountain ranges",
+        "url": "https://www.swapi.tech/api/planets/4"
+      }
+    }
+  ],
+  "species": [
+    {
+      "description": "A sepcies within the Star Wars universe",
+      "id": 1,
+      "properties": {
+        "average_height": "180",
+        "average_lifespan": "120",
+        "classification": "mammal",
+        "created": "2022-02-19T22:36:51.288Z",
+        "designation": "sentient",
+        "edited": "2022-02-19T22:36:51.288Z",
+        "eye_colors": "brown, blue, green, hazel, grey, amber",
+        "hair_colors": "blonde, brown, black, red",
+        "homeworld": "https://www.swapi.tech/api/planets/1",
+        "language": "Galactic Basic",
+        "name": "Human",
+        "skin_colors": "caucasian, black, asian, hispanic",
+        "url": "https://www.swapi.tech/api/species/1"
+      }
+    },
+    {
+      "description": "A sepcies within the Star Wars universe",
+      "id": 2,
+      "properties": {
+        "average_height": "n/a",
+        "average_lifespan": "indefinite",
+        "classification": "artificial",
+        "created": "2022-02-19T22:36:51.288Z",
+        "designation": "sentient",
+        "edited": "2022-02-19T22:36:51.288Z",
+        "eye_colors": "n/a",
+        "hair_colors": "n/a",
+        "homeworld": "https://www.swapi.tech/api/planets/2",
+        "language": "n/a",
+        "name": "Droid",
+        "skin_colors": "n/a",
+        "url": "https://www.swapi.tech/api/species/2"
+      }
+    },
+    {
+      "description": "A sepcies within the Star Wars universe",
+      "id": 3,
+      "properties": {
+        "average_height": "210",
+        "average_lifespan": "400",
+        "classification": "mammal",
+        "created": "2022-02-19T22:36:51.288Z",
+        "designation": "sentient",
+        "edited": "2022-02-19T22:36:51.288Z",
+        "eye_colors": "blue, green, yellow, brown, golden, red",
+        "hair_colors": "black, brown",
+        "homeworld": "https://www.swapi.tech/api/planets/3",
+        "language": "Shyriiwook",
+        "name": "Wookie",
+        "skin_colors": "gray",
+        "url": "https://www.swapi.tech/api/species/3"
+      }
+    }
+  ],
+  "starships": [
+    {
+      "description": "A Starship",
+      "id": 1,
+      "properties": {
+        "MGLT": "60",
+        "cargo_capacity": "3000000",
+        "consumables": "1 year",
+        "cost_in_credits": "3500000",
+        "created": "2020-09-17T17:55:06.604Z",
+        "crew": "30-165",
+        "edited": "2020-09-17T17:55:06.604Z",
+        "hyperdrive_rating": "2.0",
+        "length": "150",
+        "manufacturer": "Corellian Engineering Corporation",
+        "max_atmosphering_speed": "950",
+        "model": "CR90 corvette",
+        "name": "CR90 corvette",
+        "passengers": "600",
+        "starship_class": "corvette",
+        "url": "https://www.swapi.tech/api/starships/2"
+      }
+    },
+    {
+      "description": "A Starship",
+      "id": 2,
+      "properties": {
+        "MGLT": "60",
+        "cargo_capacity": "36000000",
+        "consumables": "2 years",
+        "cost_in_credits": "150000000",
+        "created": "2020-09-17T17:55:06.604Z",
+        "crew": "47,060",
+        "edited": "2020-09-17T17:55:06.604Z",
+        "hyperdrive_rating": "2.0",
+        "length": "1,600",
+        "manufacturer": "Kuat Drive Yards",
+        "max_atmosphering_speed": "975",
+        "model": "Imperial I-class Star Destroyer",
+        "name": "Star Destroyer",
+        "passengers": "n/a",
+        "starship_class": "Star Destroyer",
+        "url": "https://www.swapi.tech/api/starships/3"
+      }
+    },
+    {
+      "description": "A Starship",
+      "id": 3,
+      "properties": {
+        "MGLT": "75",
+        "cargo_capacity": "100000",
+        "consumables": "2 months",
+        "cost_in_credits": "100000",
+        "created": "2020-09-17T17:55:06.604Z",
+        "crew": "4",
+        "edited": "2020-09-17T17:55:06.604Z",
+        "hyperdrive_rating": "0.5",
+        "length": "34.37",
+        "manufacturer": "Corellian Engineering Corporation",
+        "max_atmosphering_speed": "1050",
+        "model": "YT-1300 light freighter",
+        "name": "Millennium Falcon",
+        "passengers": "6",
+        "starship_class": "Light freighter",
+        "url": "https://www.swapi.tech/api/starships/10"
+      }
+    }
+  ],
+  "vehicles": [
+    {
+      "description": "A vehicle",
+      "id": 1,
+      "properties": {
+        "cargo_capacity": "50000",
+        "consumables": "2 months",
+        "cost_in_credits": "150000",
+        "created": "2020-09-17T17:46:31.415Z",
+        "crew": "46",
+        "edited": "2020-09-17T17:46:31.415Z",
+        "length": "36.8 ",
+        "manufacturer": "Corellia Mining Corporation",
+        "max_atmosphering_speed": "30",
+        "model": "Digger Crawler",
+        "name": "Sand Crawler",
+        "passengers": "30",
+        "url": "https://www.swapi.tech/api/vehicles/4",
+        "vehicle_class": "wheeled"
+      }
+    },
+    {
+      "description": "A vehicle",
+      "id": 2,
+      "properties": {
+        "cargo_capacity": "5",
+        "consumables": "unknown",
+        "cost_in_credits": "10550",
+        "created": "2020-09-17T17:46:31.415Z",
+        "crew": "1",
+        "edited": "2020-09-17T17:46:31.415Z",
+        "length": "3.4 ",
+        "manufacturer": "SoroSuub Corporation",
+        "max_atmosphering_speed": "250",
+        "model": "X-34 landspeeder",
+        "name": "X-34 landspeeder",
+        "passengers": "1",
+        "url": "https://www.swapi.tech/api/vehicles/7",
+        "vehicle_class": "repulsorcraft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.ModalSelectCreate__container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+input {
+  margin: 4px 0;
+}
