@@ -9,7 +9,7 @@ or
 npm run dev
 ```
 
-## Start project:
+## Start server:
 ```
 yarn server
 ``` 
