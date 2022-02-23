@@ -1,7 +1,8 @@
-import { People, PeopleUnparser } from '../model/peopleEntity';
-import { getId } from '../../../../utils/getId';
+import { People } from "../models/people"
+import { PeopleUnparser } from "../models/peopleUnparser"
 
-const peopleEntitySetParser = ({
+export const peopleToPayload = ({
+  id,
   description,
   birthYear,
   created,
@@ -15,10 +16,12 @@ const peopleEntitySetParser = ({
   name,
   skinColor,
   url,
-}: Omit<People, 'id'>): Readonly<PeopleUnparser> => {
-  const id = getId();
-
-  return Object.freeze({
+}
+: People): PeopleUnparser => {
+  const heightValue = height === null ? null : height.toString();
+  const massValue = mass === null ? null : mass.toString();
+  
+  return {
     id,
     description,
     properties: {
@@ -28,14 +31,12 @@ const peopleEntitySetParser = ({
       eye_color: eyeColor,
       gender,
       hair_color: hairColor,
-      height: height.toString(),
+      height: heightValue,
       homeworld,
-      mass: mass.toString(),
+      mass: massValue,
       name,
       skin_color: skinColor,
       url,
-    },
-  });
-};
-
-export default peopleEntitySetParser;
+    }
+  }
+}

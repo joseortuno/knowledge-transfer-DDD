@@ -1,9 +1,9 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import ModalInputsCreate, { InputsType } from '../modalInputsUpdate';
 import { usePeople } from '../../hooks/usePeople';
-import { People } from '../../core/domain/people/model/peopleEntity';
-import { INPUTS_CREATE } from '../../constants/people';
+import { CREATE_IMPUTS } from '../../constants/people';
 import PrintConsole from '../printConsole';
+import { People } from '../../core/domain/people/models/people';
 
 interface SelectedUpdateProps {
   id: number;
@@ -32,7 +32,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   };
 
   const getInputs = (): InputsType<Omit<People, 'id'>>[] => {
-    return INPUTS_CREATE.map((input) => {
+    return CREATE_IMPUTS.map((input) => {
       const value = data && data[input.name];
       return { ...input, value: value ? value : undefined };
     });

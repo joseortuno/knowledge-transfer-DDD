@@ -1,9 +1,8 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import ModalInputsCreate, { InputsType } from '../modalInputsUpdate';
-import { usePeople } from '../../hooks/usePeople';
-import { People } from '../../core/domain/people/model/peopleEntity';
-import { INPUTS_CREATE } from '../../constants/people';
 import PrintConsole from '../printConsole';
+import { CREATE_INPUTS } from '../../constants/vehicles';
+import { useVehicle } from '../../hooks/useVehicle';
 
 interface SelectedUpdateProps {
   id: number;
@@ -14,7 +13,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   const [title, setTitle] = useState<string>('VEHICLE SELECTED 🏴‍☠️');
   const {
     data, getData, updateData, isLoading, 
-  } = usePeople();
+  } = useVehicle();
 
   useEffect(() => {
     getData(id.toString());
@@ -32,8 +31,8 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
     setIsShow(false);
   };
 
-  const getInputs = (): InputsType<Omit<People, 'id'>>[] => {
-    return INPUTS_CREATE.map((input) => {
+  const getInputs = (): InputsType<Omit<any, 'id'>>[] => { // TODO: set vehicle entity
+    return CREATE_INPUTS.map((input) => {
       const value = data && data[input.name];
       return { ...input, value: value ? value : undefined };
     });
@@ -42,7 +41,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   const element = useMemo(() => {
     return (
       !!data && (
-        <PrintConsole<People> title={title} isData={!!data} data={data} />
+        <PrintConsole<any> title={title} isData={!!data} data={data} /> // TODO: set vehicle entity
       )
     );
   }, [data]);
@@ -50,7 +49,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   return (
     <>
       {data && (
-        <ModalInputsCreate<Omit<People, 'id'>>
+        <ModalInputsCreate<Omit<any, 'id'>> // TODO: set vehicle entity
           inputs={getInputs()}
           title={'VEHICLE Update 🏀 (2/2)'}
           isShow={isShow}

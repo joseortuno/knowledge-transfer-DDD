@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { People } from '../core/domain/people/model/peopleEntity';
+import { People } from '../core/domain/people/models/people';
 import CreatePeople from '../core/domain/people/repositories/createPeople';
 import GetPeople from '../core/domain/people/repositories/getPeople';
 import RemovePeople from '../core/domain/people/repositories/removePeople';

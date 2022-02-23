@@ -3,7 +3,7 @@ import Button from '../button';
 import { usePeopleList } from '../../hooks/usePeopleList';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import { People } from '../../core/domain/people/model/peopleEntity';
+import { People } from '../../core/domain/people/models/people';
 import './styles.css';
 
 const PeopleList: FC = () => {

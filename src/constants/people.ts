@@ -1,7 +1,7 @@
 import { InputsType } from '../components/modalInputsUpdate';
-import { People } from '../core/domain/people/model/peopleEntity';
+import { People } from '../core/domain/people/models/people';
 
-export const INPUTS_CREATE: InputsType<Omit<People,'id'>>[] = [
+export const CREATE_IMPUTS: InputsType<Omit<People,'id'>>[] = [
   { name: 'description', type: 'text' },
   { name: 'birthYear', type: 'text' },
   { name: 'created', type: 'text' },
@@ -17,6 +17,6 @@ export const INPUTS_CREATE: InputsType<Omit<People,'id'>>[] = [
   { name: 'url', type: 'url' },
 ];
 
-export const INPUTS_SELECT: InputsType<{id: string}>[] = [
+export const SELECT_PEOPLE_INPUT: InputsType<{id: string}>[] = [
   { name: 'id', type: 'text' },
 ];

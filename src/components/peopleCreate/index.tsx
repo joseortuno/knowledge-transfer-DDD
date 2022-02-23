@@ -3,9 +3,9 @@ import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import { usePeople } from '../../hooks/usePeople';
 import PrintConsole from '../printConsole';
-import { People } from '../../core/domain/people/model/peopleEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS_CREATE } from '../../constants/people';
+import { CREATE_IMPUTS } from '../../constants/people';
+import { People } from '../../core/domain/people/models/people';
 import './styles.css';
 
 const PeopleCreate: FC = () => {
@@ -46,7 +46,7 @@ const PeopleCreate: FC = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<Omit<People, 'id'>>
-        inputs={INPUTS_CREATE}
+        inputs={CREATE_IMPUTS}
         title={'PEOPLE CREATE 👶'}
         isShow={isShow}
         onClose={handleOnClose}

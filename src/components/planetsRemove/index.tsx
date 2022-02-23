@@ -2,12 +2,12 @@ import { FC, useMemo, useState } from 'react';
 import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import { People } from '../../core/domain/people/model/peopleEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS_SELECT } from '../../constants/planets';
+import { SELECT_PLANETS_INPUT } from '../../constants/planets';
 import { usePlanets } from '../../hooks/usePlanets';
 import { usePlanetsList } from '../../hooks/usePlanetsList';
 import './styles.css';
+import { People } from '../../core/domain/people/models/people';
 
 const PlanetsRemove: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -47,7 +47,7 @@ const PlanetsRemove: FC = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<{ id: string }>
-        inputs={INPUTS_SELECT}
+        inputs={SELECT_PLANETS_INPUT}
         title={'INPUT SELECT 🎥'}
         isShow={isShow}
         onClose={handleOnClose}

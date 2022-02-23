@@ -2,11 +2,10 @@ import { useMemo, useState } from 'react';
 import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import { Film } from '../../core/domain/films/model/filmEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS } from '../../constants/film';
 import { useStarships } from '../../hooks/useStarships';
 import './styles.css';
+import { CREATE_INPUTS } from '../../constants/starships';
 
 const StarshipsCreate = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -31,7 +30,7 @@ const StarshipsCreate = () => {
   const element = useMemo(() => {
     return (
       !!data && (
-        <PrintConsole<Film>
+        <PrintConsole<any> // TODO: set starships entiti
           title={'STARSHIPS CREATE 🌇'}
           isData={!!data}
           data={data}
@@ -47,7 +46,7 @@ const StarshipsCreate = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<Omit<any, 'id'>> // TODO: set Entity Starships
-        inputs={INPUTS}
+        inputs={CREATE_INPUTS}
         title={'STARSHIPS CREATE 📀'}
         isShow={isShow}
         onClose={handleOnClose}

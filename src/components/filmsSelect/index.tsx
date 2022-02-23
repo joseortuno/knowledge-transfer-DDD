@@ -5,7 +5,7 @@ import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
 import { Film } from '../../core/domain/films/model/filmEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS_SELECT } from '../../constants/film';
+import { SELECT_FILMS_INPUT } from '../../constants/films';
 import './styles.css';
 
 const FilmSelect: FC = () => {
@@ -46,7 +46,7 @@ const FilmSelect: FC = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<{ id: string }>
-        inputs={INPUTS_SELECT}
+        inputs={SELECT_FILMS_INPUT}
         title={'INPUT SELECT 🎥'}
         isShow={isShow}
         onClose={handleOnClose}

@@ -4,9 +4,9 @@ import { usePeople } from '../../hooks/usePeople';
 import ErrorMessage from '../errorMessage';
 import { usePeopleList } from '../../hooks/usePeopleList';
 import PrintConsole from '../printConsole';
-import { People } from '../../core/domain/people/model/peopleEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS_SELECT } from '../../constants/people';
+import { SELECT_PEOPLE_INPUT } from '../../constants/people';
+import { People } from '../../core/domain/people/models/people';
 import './styles.css';
 
 const PeopleRemove: FC = () => {
@@ -47,7 +47,7 @@ const PeopleRemove: FC = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<{ id: string }>
-        inputs={INPUTS_SELECT}
+        inputs={SELECT_PEOPLE_INPUT}
         title={'INPUT SELECT 🎥'}
         isShow={isShow}
         onClose={handleOnClose}

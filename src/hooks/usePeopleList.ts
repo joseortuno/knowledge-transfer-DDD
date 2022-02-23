@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { People } from '../core/domain/people/model/peopleEntity';
+import { People } from '../core/domain/people/models/people';
 import GetPeopleList from '../core/domain/people/repositories/getPeopleList';
 
 export const usePeopleList = () => {

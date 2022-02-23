@@ -3,10 +3,10 @@ import Button from '../button';
 import { usePeople } from '../../hooks/usePeople';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import { People } from '../../core/domain/people/model/peopleEntity';
 import ModalInputsCreate from '../modalInputsUpdate';
-import { INPUTS_SELECT } from '../../constants/people';
+import { SELECT_PEOPLE_INPUT } from '../../constants/people';
 import './styles.css';
+import { People } from '../../core/domain/people/models/people';
 
 const PeopleSelect: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -46,7 +46,7 @@ const PeopleSelect: FC = () => {
       </Button>
       <ErrorMessage isError={isError} />
       <ModalInputsCreate<{ id: string }>
-        inputs={INPUTS_SELECT}
+        inputs={SELECT_PEOPLE_INPUT}
         title={'PEOPLE SELECT  🙆‍♀️ '}
         isShow={isShow}
         onClose={handleOnClose}

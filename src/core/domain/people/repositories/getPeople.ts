@@ -1,11 +1,15 @@
 import { peoplePath } from '../../../../endpointsPath/people';
 import { api } from '../../../services/api';
-import PeopleEntity, { People, PeopleUnparser } from '../model/peopleEntity';
+import PeopleEntity from '../entities/peopleEntity';
+import { payloadToPeople } from '../mappers/payloadToPeople';
+import { People } from '../models/people';
+import { PeopleUnparser } from '../models/peopleUnparser';
 
 const GetPeople = async (id: string): Promise<People> => {
   const url = peoplePath(id);
   const data = await api.get<PeopleUnparser>(url);
-  return PeopleEntity(data);
+  const parserData = payloadToPeople(data);
+  return PeopleEntity(parserData);
 };
 
 export default GetPeople;
