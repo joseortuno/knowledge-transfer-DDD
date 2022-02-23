@@ -1,38 +1,40 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import ModalInputsUpdate, { InputsType } from '../modalInputsUpdate';
+import { usePeople } from '../../hooks/usePeople';
+import { CREATE_IMPUTS } from '../../constants/people';
 import PrintConsole from '../printConsole';
-import { CREATE_INPUTS } from '../../constants/vehicles';
-import { useVehicle } from '../../hooks/useVehicle';
 
-interface SelectedUpdateProps {
+interface UpdateDataModalProps {
   id: number;
+  onResetId: () => void;
 }
 
-const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
+const UpdateDataModal: FC<UpdateDataModalProps> = ({ id, onResetId }) => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('VEHICLE SELECTED 🏴‍☠️');
   const {
     data, getData, updateData, isLoading, 
-  } = useVehicle();
+  } = usePeople();
 
   useEffect(() => {
-    getData(id.toString());
+    getData(id);
     setIsShow(true);
   }, [id]);
 
   const handleOnClose = () => {
     setIsShow(false);
+    onResetId();
   };
 
-  const handleOnFinish = async (editValues: Omit<any, 'id'>) => {
-    // TODO: set Entity Vehicle
+  const handleOnFinish = async (editValues: any) => { // TODO: set Entity Vehicle
     setTitle('VEHICLE UPDATED 🪙');
     await updateData(id, { ...data, ...editValues });
     setIsShow(false);
+    onResetId();
   };
 
-  const getInputs = (): InputsType<Omit<any, 'id'>>[] => { // TODO: set vehicle entity
-    return CREATE_INPUTS.map((input) => {
+  const getInputs = (): InputsType<any>[] => { // TODO: set vehicle entity
+    return CREATE_IMPUTS.map((input) => {
       const value = data && data[input.name];
       return { ...input, value: value ? value : undefined };
     });
@@ -49,7 +51,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   return (
     <>
       {data && (
-        <ModalInputsUpdate<Omit<any, 'id'>> // TODO: set vehicle entity
+        <ModalInputsUpdate<any>
           inputs={getInputs()}
           title={'VEHICLE Update 🏀 (2/2)'}
           isShow={isShow}
@@ -63,4 +65,4 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   );
 };
 
-export default SelectedUpdate;
+export default UpdateDataModal;

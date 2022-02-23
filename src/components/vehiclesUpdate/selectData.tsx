@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { usePeopleList } from "../../hooks/usePeopleList";
+import { useVehiclesList } from '../../hooks/useVehiclesList';
 import ModalSelectCreate, { OptionsType } from "../modalSelectCreate";
 
 interface SelectDataModalProps {
@@ -12,7 +12,7 @@ interface SelectDataModalProps {
 const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onError }) => {
   const {
     data, getData, isLoading, isError, 
-  } = usePeopleList();
+  } = useVehiclesList();
 
   useEffect(() => {
     getData();
@@ -39,7 +39,7 @@ const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onE
 
   return (
     <ModalSelectCreate
-      title={'PEOPLE Update 🏀 (1/2)'}
+      title={'VEHICLES Update 🧨 (1/2)'}
       options={getOptions()}
       isShow={isShow}
       onClose={handleOnClose}
