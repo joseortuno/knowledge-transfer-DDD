@@ -1,0 +1,1 @@
+export type HairColor = 'blond' | 'n/a' | 'none' | 'brown' | 'brown, grey' | 'auburn, white' | 'white' | 'black';

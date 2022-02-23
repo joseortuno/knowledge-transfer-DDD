@@ -1,0 +1,1 @@
+export type SkinColor = 'gold' | 'dark' | 'light' | 'fair' | 'green' | 'white' | 'unknown' | 'white, blue';
