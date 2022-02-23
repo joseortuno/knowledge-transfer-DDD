@@ -1,10 +1,10 @@
 # KNOWLEGE TRANSFER DDD 🚸
-<em>Project lab to practice DDD applied architecture in front-end</em>
-## Start project:
+*Project lab to practice DDD applied architecture in front-end*
+## Start project 🚀
 `yarn dev` or `npm run dev`
-## Start server:
+## Start server 🚐
 `yarn server` or `npm run server`
-## Endpoints info:
+## Endpoints info 🔌
 Home:
 ```
 http://localhost:4000
@@ -18,7 +18,7 @@ http://localhost:4000/species
 http://localhost:4000/starships
 http://localhost:4000/vehicles
 ```
-
+_________________
 ### PEOPLE
 #### PEOPLE LIST
 Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
@@ -245,7 +245,7 @@ Response:
   }
 }
 ```
-
+_________________
 ### FILMS
 Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
@@ -292,5 +292,6 @@ Response:
   }
 }
 ```
+___
 
-...Visit server resources to more info on the rest of the endspoints.
+*...Visit server resources to more info on the rest of the endspoints.*
