@@ -99,7 +99,7 @@
         "birth_year": "19BBY",
         "created": "2022-02-19T22:36:51.281Z",
         "edited": "2022-02-19T22:36:51.281Z",
-        "eye_color": "blue",
+        "eye_color": "red",
         "gender": "male",
         "hair_color": "blond",
         "height": "172",
@@ -108,24 +108,6 @@
         "name": "Luke Skywalker",
         "skin_color": "fair",
         "url": "https://www.swapi.tech/api/people/1"
-      }
-    },
-    {
-      "description": "A person within the Star Wars universe",
-      "id": 2,
-      "properties": {
-        "birth_year": "112BBY",
-        "created": "2022-02-19T22:36:51.281Z",
-        "edited": "2022-02-19T22:36:51.281Z",
-        "eye_color": "yellow",
-        "gender": "n/a",
-        "hair_color": "n/a",
-        "height": "167",
-        "homeworld": "https://www.swapi.tech/api/planets/1",
-        "mass": "75",
-        "name": "C-3PO",
-        "skin_color": "gold",
-        "url": "https://www.swapi.tech/api/people/2"
       }
     },
     {
@@ -342,6 +324,24 @@
         "name": "Padmé Amidala",
         "skin_color": "light",
         "url": "https://www.swapi.tech/api/people/35"
+      }
+    },
+    {
+      "id": 380748063,
+      "description": "fsfsd",
+      "properties": {
+        "birth_year": "fsaf",
+        "created": "fasdfas",
+        "edited": "sdfsadf",
+        "eye_color": "fdsfsad",
+        "gender": "sdfsadf",
+        "hair_color": "sdfsdaf",
+        "height": "123123",
+        "homeworld": "fsadfas",
+        "mass": "234213",
+        "name": "fdsaf",
+        "skin_color": "dsDas",
+        "url": "https://www.swapi.tech/api/people/2"
       }
     }
   ],

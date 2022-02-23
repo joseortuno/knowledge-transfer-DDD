@@ -2,7 +2,7 @@ import { FC, useMemo, useState } from 'react';
 import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import ModalInputsCreate from '../modalInputsUpdate';
+import ModalInputsUpdate from '../modalInputsUpdate';
 import { SELECT_PLANETS_INPUT } from '../../constants/planets';
 import { usePlanets } from '../../hooks/usePlanets';
 import { usePlanetsList } from '../../hooks/usePlanetsList';
@@ -46,7 +46,7 @@ const PlanetsRemove: FC = () => {
         Planets Remove 🎈
       </Button>
       <ErrorMessage isError={isError} />
-      <ModalInputsCreate<{ id: string }>
+      <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_PLANETS_INPUT}
         title={'INPUT SELECT 🎥'}
         isShow={isShow}

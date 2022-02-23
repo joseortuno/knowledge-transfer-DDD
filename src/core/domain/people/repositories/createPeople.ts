@@ -5,9 +5,10 @@ import PeopleEntity from '../entities/peopleEntity';
 import { payloadToPeople } from '../mappers/payloadToPeople';
 import { peopleToPayload } from '../mappers/peopleToPayload';
 import { People } from '../models/people';
+import { NewPeople } from '../models/newPeople';
 import { PeopleUnparser } from '../models/peopleUnparser';
 
-const CreatePeople = async (data: Omit<People, 'id'>): Promise<People> => {
+const CreatePeople = async (data: NewPeople): Promise<People> => {
   const id = getId();
   const peopleUnparser = peopleToPayload({...data, id })
   const url = peopleCreatePath();

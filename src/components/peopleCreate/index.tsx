@@ -3,10 +3,11 @@ import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import { usePeople } from '../../hooks/usePeople';
 import PrintConsole from '../printConsole';
-import ModalInputsCreate from '../modalInputsUpdate';
+import ModalInputsUpdate from '../modalInputsUpdate';
 import { CREATE_IMPUTS } from '../../constants/people';
 import { People } from '../../core/domain/people/models/people';
 import './styles.css';
+import { NewPeople } from '../../core/domain/people/models/newPeople';
 
 const PeopleCreate: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -22,7 +23,7 @@ const PeopleCreate: FC = () => {
     setIsShow(false);
   };
 
-  const handleOnFinish = async (values: Omit<People, 'id'>) => {
+  const handleOnFinish = async (values: NewPeople) => {
     await createData(values);
     setIsShow(false);
   };
@@ -45,7 +46,7 @@ const PeopleCreate: FC = () => {
         People Create 👶
       </Button>
       <ErrorMessage isError={isError} />
-      <ModalInputsCreate<Omit<People, 'id'>>
+      <ModalInputsUpdate<NewPeople>
         inputs={CREATE_IMPUTS}
         title={'PEOPLE CREATE 👶'}
         isShow={isShow}

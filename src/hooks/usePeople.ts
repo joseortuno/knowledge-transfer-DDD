@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { People } from '../core/domain/people/models/people';
+import { NewPeople } from '../core/domain/people/models/newPeople';
 import CreatePeople from '../core/domain/people/repositories/createPeople';
 import GetPeople from '../core/domain/people/repositories/getPeople';
 import RemovePeople from '../core/domain/people/repositories/removePeople';
@@ -36,7 +37,7 @@ export const usePeople = () => {
     }
   };
 
-  const createData = async (data: Omit<People, 'id'>) => {
+  const createData = async (data: NewPeople) => {
     setIsLoading(true);
     try {
       const response = await CreatePeople(data);
@@ -48,7 +49,7 @@ export const usePeople = () => {
     }
   };
 
-  const updateData = async (id: number, data: Omit<People, 'id'>) => {
+  const updateData = async (id: number, data: NewPeople) => {
     setIsLoading(true);
     try {
       const response = await UpdatePeople(id, data);

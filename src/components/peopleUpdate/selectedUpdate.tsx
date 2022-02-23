@@ -1,9 +1,10 @@
 import { FC, useEffect, useMemo, useState } from 'react';
-import ModalInputsCreate, { InputsType } from '../modalInputsUpdate';
+import ModalInputsUpdate, { InputsType } from '../modalInputsUpdate';
 import { usePeople } from '../../hooks/usePeople';
 import { CREATE_IMPUTS } from '../../constants/people';
 import PrintConsole from '../printConsole';
 import { People } from '../../core/domain/people/models/people';
+import { NewPeople } from '../../core/domain/people/models/newPeople';
 
 interface SelectedUpdateProps {
   id: number;
@@ -25,13 +26,13 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
     setIsShow(false);
   };
 
-  const handleOnFinish = async (editValues: Omit<People, 'id'>) => {
+  const handleOnFinish = async (editValues: NewPeople) => {
     setTitle('PEOPLE UPDATED 🎾');
     await updateData(id, { ...data, ...editValues });
     setIsShow(false);
   };
 
-  const getInputs = (): InputsType<Omit<People, 'id'>>[] => {
+  const getInputs = (): InputsType<NewPeople>[] => {
     return CREATE_IMPUTS.map((input) => {
       const value = data && data[input.name];
       return { ...input, value: value ? value : undefined };
@@ -49,7 +50,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   return (
     <>
       {data && (
-        <ModalInputsCreate<Omit<People, 'id'>>
+        <ModalInputsUpdate<NewPeople>
           inputs={getInputs()}
           title={'PEOPLE Update 🏀 (2/2)'}
           isShow={isShow}

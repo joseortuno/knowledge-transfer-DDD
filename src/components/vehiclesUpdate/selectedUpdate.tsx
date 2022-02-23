@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo, useState } from 'react';
-import ModalInputsCreate, { InputsType } from '../modalInputsUpdate';
+import ModalInputsUpdate, { InputsType } from '../modalInputsUpdate';
 import PrintConsole from '../printConsole';
 import { CREATE_INPUTS } from '../../constants/vehicles';
 import { useVehicle } from '../../hooks/useVehicle';
@@ -49,7 +49,7 @@ const SelectedUpdate: FC<SelectedUpdateProps> = ({ id }) => {
   return (
     <>
       {data && (
-        <ModalInputsCreate<Omit<any, 'id'>> // TODO: set vehicle entity
+        <ModalInputsUpdate<Omit<any, 'id'>> // TODO: set vehicle entity
           inputs={getInputs()}
           title={'VEHICLE Update 🏀 (2/2)'}
           isShow={isShow}

@@ -8,19 +8,19 @@ export interface InputsType<T> {
   value?: string | number;
 }
 
-interface ModalInputsCreateProps<T> extends Omit<ModalProps, 'onFinish'> {
+interface ModalInputsUpdateProps<T> extends Omit<ModalProps, 'onFinish'> {
   inputs: InputsType<T>[];
   onFinish: (values: T) => void;
 }
 
-const ModalInputsCreate = <T extends {}>({
+const ModalInputsUpdate = <T extends {}>({
   title,
   inputs,
   isShow,
   onClose,
   onFinish,
   ...props
-}: ModalInputsCreateProps<T>) => {
+}: ModalInputsUpdateProps<T>) => {
   const [values, setValues] = useState<any>({});
 
   const handleOnInputChange = (event: any) => {
@@ -47,7 +47,7 @@ const ModalInputsCreate = <T extends {}>({
       isShow={isShow}
       onClose={handleOnClose}
       onFinish={handleOnFinish}
-      className={'ModalInputsCreate__container'}
+      className={'ModalInputsUpdate__container'}
       {...props}
     >
       {inputs.map(({ name, type, value }, key) => {
@@ -66,4 +66,4 @@ const ModalInputsCreate = <T extends {}>({
   );
 };
 
-export default ModalInputsCreate;
+export default ModalInputsUpdate;

@@ -4,7 +4,7 @@ import { usePeople } from '../../hooks/usePeople';
 import ErrorMessage from '../errorMessage';
 import { usePeopleList } from '../../hooks/usePeopleList';
 import PrintConsole from '../printConsole';
-import ModalInputsCreate from '../modalInputsUpdate';
+import ModalInputsUpdate from '../modalInputsUpdate';
 import { SELECT_PEOPLE_INPUT } from '../../constants/people';
 import { People } from '../../core/domain/people/models/people';
 import './styles.css';
@@ -46,7 +46,7 @@ const PeopleRemove: FC = () => {
         People Remove 🔥
       </Button>
       <ErrorMessage isError={isError} />
-      <ModalInputsCreate<{ id: string }>
+      <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_PEOPLE_INPUT}
         title={'INPUT SELECT 🎥'}
         isShow={isShow}

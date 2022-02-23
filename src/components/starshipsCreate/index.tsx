@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
-import ModalInputsCreate from '../modalInputsUpdate';
+import ModalInputsUpdate from '../modalInputsUpdate';
 import { useStarships } from '../../hooks/useStarships';
 import './styles.css';
 import { CREATE_INPUTS } from '../../constants/starships';
@@ -45,7 +45,7 @@ const StarshipsCreate = () => {
         Starships Create 📀
       </Button>
       <ErrorMessage isError={isError} />
-      <ModalInputsCreate<Omit<any, 'id'>> // TODO: set Entity Starships
+      <ModalInputsUpdate<Omit<any, 'id'>> // TODO: set Entity Starships
         inputs={CREATE_INPUTS}
         title={'STARSHIPS CREATE 📀'}
         isShow={isShow}
