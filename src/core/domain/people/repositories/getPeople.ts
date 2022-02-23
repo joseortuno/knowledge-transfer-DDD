@@ -5,7 +5,7 @@ import { payloadToPeople } from '../mappers/payloadToPeople';
 import { People } from '../models/people';
 import { PeopleUnparser } from '../models/peopleUnparser';
 
-const GetPeople = async (id: string): Promise<People> => {
+const GetPeople = async (id: string): Promise<Readonly<People>> => {
   const url = peoplePath(id);
   const data = await api.get<PeopleUnparser>(url);
   const parserData = payloadToPeople(data);

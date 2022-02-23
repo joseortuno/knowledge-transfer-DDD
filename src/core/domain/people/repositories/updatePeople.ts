@@ -10,7 +10,7 @@ import { PeopleUnparser } from '../models/peopleUnparser';
 const UpdatePeople = async (
   id: number,
   data: NewPeople,
-): Promise<People> => {
+): Promise<Readonly<People>> => {
   const url = peopleUpdatePath(id);
   const peopleUnparser = peopleToPayload({...data, id })
   const response = await api.update<PeopleUnparser>(url, peopleUnparser);
