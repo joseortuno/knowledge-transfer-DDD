@@ -1,11 +1,11 @@
-# KNOWLEGE TRANSFER DDD
-Project lab to practice DDD applied architecture in front-end
+# KNOWLEGE TRANSFER DDD 🚸
+<em>Project lab to practice DDD applied architecture in front-end</em>
 ## Start project:
 `yarn dev` or `npm run dev`
 ## Start server:
 `yarn server` or `npm run server`
 ## Endpoints info:
-Home
+Home:
 ```
 http://localhost:4000
 ```
@@ -21,7 +21,7 @@ http://localhost:4000/vehicles
 
 ### PEOPLE
 #### PEOPLE LIST
-Method: GET 
+Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/people
 ```
@@ -75,7 +75,7 @@ Response:
 ```
 
 #### PEOPLE SELECT
-Method: GET 
+Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -129,7 +129,7 @@ Response:
 ```
 
 #### PEOPLE CREATE
-Method: POST 
+Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`POST`</span>
 ```
 http://localhost:4000/people
 ```
@@ -183,7 +183,7 @@ Response:
 ```
 
 #### PEOPLE REMOVE
-Method: DELETE
+Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`DELETE`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -193,7 +193,7 @@ Response:
 ```
 
 #### PEOPLE UPDATE
-Method: PATCH
+Method: Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`PATCH`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -247,8 +247,7 @@ Response:
 ```
 
 ### FILMS
-
-Method: GET 
+Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/films/:id
 ```
