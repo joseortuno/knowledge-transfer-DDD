@@ -21,7 +21,7 @@ http://localhost:4000/vehicles
 
 ### PEOPLE
 #### PEOPLE LIST
-Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
+Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/people
 ```
@@ -75,7 +75,7 @@ Response:
 ```
 
 #### PEOPLE SELECT
-Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
+Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -129,7 +129,7 @@ Response:
 ```
 
 #### PEOPLE CREATE
-Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`POST`</span>
+Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`POST`</span>
 ```
 http://localhost:4000/people
 ```
@@ -183,7 +183,7 @@ Response:
 ```
 
 #### PEOPLE REMOVE
-Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`DELETE`</span>
+Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`DELETE`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -193,7 +193,7 @@ Response:
 ```
 
 #### PEOPLE UPDATE
-Method: Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`PATCH`</span>
+Method: Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`PATCH`</span>
 ```
 http://localhost:4000/people/:id
 ```
@@ -247,7 +247,7 @@ Response:
 ```
 
 ### FILMS
-Method: <span style="background:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
+Method: <span style="background-color:green;padding-left:3px;padding-right:3px;border-radius:2px;">`GET`</span>
 ```
 http://localhost:4000/films/:id
 ```
