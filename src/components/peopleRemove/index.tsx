@@ -23,7 +23,7 @@ const PeopleRemove: FC = () => {
   };
 
   const handleOnFinish = async ({ id }: { id: string }) => {
-    id && (await removeData(id));
+    id && (await removeData(Number(id)));
     await getData();
     setIsShow(false);
   };

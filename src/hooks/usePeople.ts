@@ -11,7 +11,7 @@ export const usePeople = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [data, setData] = useState<People | null>(null);
 
-  const getData = async (id: string): Promise<void> => {
+  const getData = async (id: number): Promise<void> => {
     setIsLoading(true);
     try {
       const response = await GetPeople(id);
@@ -25,7 +25,7 @@ export const usePeople = () => {
     }
   };
 
-  const removeData = async (id: string): Promise<void> => { 
+  const removeData = async (id: number): Promise<void> => { 
     setIsLoading(true);
     try {
       await RemovePeople(id);

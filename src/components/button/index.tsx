@@ -2,7 +2,7 @@ import { FC } from 'react';
 import './styles.css';
 
 interface PeopleButtonProps {
-  disabled: boolean;
+  disabled?: boolean;
   onClick: () => void;
 }
 

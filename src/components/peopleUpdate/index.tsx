@@ -1,54 +1,53 @@
 import { FC, useState } from 'react';
 import Button from '../button';
 import ErrorMessage from '../errorMessage';
-import ModalSelectCreate, { OptionsType } from '../modalSelectCreate';
-import { usePeopleList } from '../../hooks/usePeopleList';
-import SelectedUpdate from './selectedUpdate';
+import UpdateDataModal from './selectedUpdate';
+import SelectDataModal from './selectData';
 import './styles.css';
 
 const PeopleUpdate: FC = () => {
-  const [isShow, setIsShow] = useState<boolean>(false);
   const [id, setId] = useState<number | null>(null);
-  const {
-    data, getData, isLoading, isError, 
-  } = usePeopleList();
+  const [isShowSelect, setIsShowSelect] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
 
-  const handleOnClick = async () => {
-    getData();
-    setIsShow(true);
+  const handleOnClick = (): void => {
+    setIsShowSelect(true);
   };
 
-  const handleOnClose = () => {
-    setIsShow(false);
+  const handleOnIsShow = (_isShow: boolean): void => {
+    setIsShowSelect(_isShow);
   };
 
-  const handleOnFinish = (values: OptionsType | undefined) => {
-    if (values?.value) {
-      setId(values.value);
-      setIsShow(false);
-      return;
-    }
+  const handleOnId = (id: number): void => {
+    setId(id);
   };
 
-  const getOptions = (): OptionsType[] => {
-    return data.map(({ id, name }) => ({ value: id, label: name }));
+  const handleOnError = (_isError: boolean): void => {
+    setIsError(_isError);
   };
+
+  const handleOnResetId = () => {
+    setId(null);
+  }
 
   return (
     <div className="PeopleUpdate__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
+      <Button onClick={handleOnClick}>
         People Update 🏀
       </Button>
       <ErrorMessage isError={isError} />
-      <ModalSelectCreate
-        title={'PEOPLE Update 🏀 (1/2)'}
-        options={getOptions()}
-        isShow={isShow}
-        onClose={handleOnClose}
-        onFinish={handleOnFinish}
-        textSubmit={'Select'}
+      <SelectDataModal
+        isShow={isShowSelect}
+        onIsShow={handleOnIsShow}
+        onId={handleOnId}
+        onError={handleOnError}
       />
-      {id && <SelectedUpdate id={id} />}
+      {id && (
+        <UpdateDataModal 
+          id={id}
+          onResetId={handleOnResetId}
+        />
+      )}
     </div>
   );
 };
