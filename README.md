@@ -1,9 +1,17 @@
 # KNOWLEGE TRANSFER DDD 🚸
 *Project lab to practice DDD applied architecture in front-end*
 ## Start project 🚀
-`yarn dev` or `npm run dev`
+```
+yarn dev 
+// or 
+npm run dev
+```
 ## Start server 🚐
-`yarn server` or `npm run server`
+```
+yarn server
+// or
+npm run server
+```
 ## Endpoints info 🔌
 Home:
 ```
