@@ -1,5 +1,8 @@
 # KNOWLEGE TRANSFER DDD 🚸
 *Project lab to practice DDD applied architecture in front-end*
+
+![](https://static.wikia.nocookie.net/muppet/images/0/0c/ProfessorGroverSchool.jpg/revision/latest?cb=20120905235837)
+
 ## Start project 🚀
 ```
 yarn dev 
