@@ -1,6 +1,6 @@
 import { peopleListPath } from '../../../../endpointsPath/people';
 import { api } from '../../../services/api';
-import { PeopleListValueObject } from '../entities/peopleListValueObject';
+import PeopleListValueObject from '../entities/peopleListValueObject';
 import { payloadToPeople } from '../mappers/payloadToPeople';
 import { People } from '../models/people';
 import { PeopleUnparser } from '../models/peopleUnparser';
