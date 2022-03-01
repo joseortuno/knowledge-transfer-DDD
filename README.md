@@ -3,13 +3,13 @@
 ## Start project 🚀
 ```
 yarn dev 
-// or 
+# or 
 npm run dev
 ```
 ## Start server 🚐
 ```
 yarn server
-// or
+# or
 npm run server
 ```
 ## Endpoints info 🔌
