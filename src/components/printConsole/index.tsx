@@ -4,11 +4,11 @@ interface PrintConsoleProps<T> {
   isData: boolean;
 }
 
-const PrintConsole = <T extends {}>({
+const PrintConsole = <Type extends {}>({
   title,
   data,
   isData,
-}: PrintConsoleProps<T>) => {
+}: PrintConsoleProps<Type>) => {
   isData && console.log(`::::${title}: `, data);
   return <></>;
 };

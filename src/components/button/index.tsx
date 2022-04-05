@@ -1,18 +1,18 @@
 import { FC } from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 
-interface PeopleButtonProps {
+interface ButtonProps {
   disabled?: boolean;
   onClick: () => void;
 }
 
-const PeopleButton: FC<PeopleButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   disabled,
   onClick,
   children,
 }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <button disabled={disabled} onClick={onClick}>
         {children}
       </button>
@@ -20,4 +20,4 @@ const PeopleButton: FC<PeopleButtonProps> = ({
   );
 };
 
-export default PeopleButton;
+export default Button;

@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { People } from 'core/domain/people/models/people';
-import { NewPeople } from 'core/domain/people/models/newPeople';
-import CreatePeople from 'core/domain/people/repositories/createPeople';
-import GetPeople from 'core/domain/people/repositories/getPeople';
-import RemovePeople from 'core/domain/people/repositories/removePeople';
-import UpdatePeople from 'core/domain/people/repositories/updatePeople';
+import { People } from '../core/domain/people/models/people';
+import { NewPeople } from '../core/domain/people/models/newPeople';
+import CreatePeople from '../core/domain/people/repositories/createPeople';
+import GetPeople from '../core/domain/people/repositories/getPeople';
+import RemovePeople from '../core/domain/people/repositories/removePeople';
+import UpdatePeople from '../core/domain/people/repositories/updatePeople';
 
 export const usePeople = () => {
   const [isError, setIsError] = useState<boolean>(false);

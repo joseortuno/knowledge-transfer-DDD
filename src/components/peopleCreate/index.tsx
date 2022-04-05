@@ -6,13 +6,13 @@ import PrintConsole from '../printConsole';
 import ModalInputsUpdate from '../modalInputsUpdate';
 import { CREATE_IMPUTS } from '../../constants/people';
 import { People } from '../../core/domain/people/models/people';
-import './styles.css';
 import { NewPeople } from '../../core/domain/people/models/newPeople';
+import styles from './styles.module.css';
 
 const PeopleCreate: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const {
-    data, createData, isLoading, isError, 
+    data, createData, loading, error,
   } = usePeople();
 
   const handleOnClick = () => {
@@ -41,18 +41,18 @@ const PeopleCreate: FC = () => {
   }, [data]);
 
   return (
-    <div className="PeopleCreate__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
-        People Create 👶
+    <div className={styles.container}>
+      <Button onClick={handleOnClick} disabled={loading}>
+        {'People Create 👶'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={error} />
       <ModalInputsUpdate<NewPeople>
         inputs={CREATE_IMPUTS}
         title={'PEOPLE CREATE 👶'}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
-        isLoading={isLoading}
+        loading={loading}
       />
       {element}
     </div>

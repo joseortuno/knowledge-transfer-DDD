@@ -15,7 +15,7 @@ const UpdateDataModal: FC<UpdateDataModalProps> = ({ id, onResetId }) => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('PEOPLE SELECTED 🏂');
   const {
-    data, getData, updateData, isLoading, 
+    data, getData, updateData, loading, 
   } = usePeople();
 
   useEffect(() => {
@@ -56,10 +56,10 @@ const UpdateDataModal: FC<UpdateDataModalProps> = ({ id, onResetId }) => {
         <ModalInputsUpdate<NewPeople>
           inputs={getInputs()}
           title={'PEOPLE Update 🏀 (2/2)'}
-          isShow={isShow}
+          show={isShow}
           onClose={handleOnClose}
           onFinish={handleOnFinish}
-          isLoading={isLoading}
+          loading={loading}
         />
       )}
       {element}

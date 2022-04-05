@@ -1,6 +1,6 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect } from 'react';
 import { useVehiclesList } from '../../hooks/useVehiclesList';
-import ModalSelectCreate, { OptionsType } from "../modalSelectCreate";
+import ModalSelectCreate, { OptionsType } from '../modalSelectCreate';
 
 interface SelectDataModalProps {
   isShow: boolean;
@@ -9,9 +9,11 @@ interface SelectDataModalProps {
   onError: (isError: boolean) => void;
 }
 
-const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onError }) => {
+const SelectDataModal: FC<SelectDataModalProps> = ({
+  isShow, onIsShow, onId, onError, 
+}) => {
   const {
-    data, getData, isLoading, isError, 
+    data, getData, loading, error, 
   } = useVehiclesList();
 
   useEffect(() => {
@@ -19,8 +21,8 @@ const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onE
   }, []);
 
   useEffect(() => {
-    onError(isError);
-  }, [isError]);
+    onError(error);
+  }, [ErrorEvent]);
 
   const handleOnClose = (): void => {
     onIsShow(false);
@@ -41,13 +43,13 @@ const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onE
     <ModalSelectCreate
       title={'VEHICLES Update 🧨 (1/2)'}
       options={getOptions()}
-      isShow={isShow}
+      show={isShow}
       onClose={handleOnClose}
       onFinish={handleOnFinish}
       textSubmit={'Select'}
-      isLoading={isLoading}
+      loading={loading}
     />
-  )
-}
+  );
+};
 
 export default SelectDataModal;

@@ -16,5 +16,5 @@ export const usePlanets = () => {
     }
   };
   
-  return { removeData, isLoading, isError };
+  return { removeData, loading: isLoading, error: isError };
 };

@@ -1,120 +1,136 @@
 {
-  "env": {
-      "browser": true,
-      "es2021": true
-  },
-  "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-  },
-  "plugins": [
-      "react",
-      "@typescript-eslint"
-  ],
-  "rules": {
-      // suppress errors for missing 'import React' in files
-      "react/react-in-jsx-scope": "off",
-      // allow jsx syntax in js files (for next.js project)
-      "react/jsx-filename-extension": [
-          1,
-          {
-              "extensions": [
-                  ".ts",
-                  ".tsx"
-              ]
-          }
-      ], //should add ".ts" if typescript project
-      "indent": [
-          "error",
-          2
-      ],
-      "linebreak-style": [
-          "error",
-          "unix"
-      ],
-      "quotes": [
-          "error",
-          "single"
-      ],
-      "semi": [
-          "error",
-          "always"
-      ],
-      "react/prop-types": 0,
-      "max-params": [
-          "error",
-          2
-      ],
-      "react/jsx-first-prop-new-line": [
-          2,
-          "multiline"
-      ],
-      "react/jsx-max-props-per-line": [
-          2,
-          {
-              "maximum": 1,
-              "when": "multiline"
-          }
-      ],
-      "react/jsx-indent-props": [
-          2,
-          2
-      ],
-      "react/jsx-closing-bracket-location": [
-          2,
-          "tag-aligned"
-      ],
-      "max-len": [
-          1,
-          120,
-          {
-              "ignoreComments": true,
-              "ignoreTrailingComments": true,
-              "ignoreUrls": true,
-              "ignoreStrings": true
-          }
-      ],
-      "object-curly-newline": [
-          "error",
-          {
-              "ObjectPattern": {
-                  "multiline": true,
-                  "minProperties": 4
-              },
-              "ImportDeclaration": "never",
-              "ExportDeclaration": "never"
-          }
-      ],
-      "object-curly-spacing": [
-          "error",
-          "always"
-      ],
-      // "sort-imports": ["error", { "ignoreCase": true  }],
-      "comma-dangle": [
-          "error",
-          "always-multiline"
-      ],
-      "jsx-quotes": [
-          "error",
-          "prefer-single"
-      ],
-      "eol-last": [
-          "error",
-          "always"
-      ]
-  },
-  "settings": {
-      "react": {
-          "version": "detect"
-      }
-  }
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/jsx-curly-brace-presence": [
+            "error",
+            {
+                "props": "always",
+                "children": "always"
+            }
+        ],
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "extendDefaults": true,
+                "types": {
+                    "{}": false
+                }
+            }
+        ],
+        // suppress errors for missing 'import React' in files
+        "react/react-in-jsx-scope": "off",
+        // allow jsx syntax in js files (for next.js project)
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ], //should add ".ts" if typescript project
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/prop-types": 0,
+        "max-params": [
+            "error",
+            2
+        ],
+        "react/jsx-first-prop-new-line": [
+            2,
+            "multiline"
+        ],
+        "react/jsx-max-props-per-line": [
+            2,
+            {
+                "maximum": 1,
+                "when": "multiline"
+            }
+        ],
+        "react/jsx-indent-props": [
+            2,
+            2
+        ],
+        "react/jsx-closing-bracket-location": [
+            2,
+            "tag-aligned"
+        ],
+        "max-len": [
+            1,
+            120,
+            {
+                "ignoreComments": true,
+                "ignoreTrailingComments": true,
+                "ignoreUrls": true,
+                "ignoreStrings": true
+            }
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectPattern": {
+                    "multiline": true,
+                    "minProperties": 4
+                },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": "never"
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        // "sort-imports": ["error", { "ignoreCase": true  }],
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }

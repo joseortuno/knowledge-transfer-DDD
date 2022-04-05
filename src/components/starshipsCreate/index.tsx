@@ -4,8 +4,8 @@ import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
 import ModalInputsUpdate from '../modalInputsUpdate';
 import { useStarships } from '../../hooks/useStarships';
-import './styles.css';
 import { CREATE_INPUTS } from '../../constants/starships';
+import styles from './styles.module.css';
 
 const StarshipsCreate = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -40,15 +40,15 @@ const StarshipsCreate = () => {
   }, [data]);
 
   return (
-    <div className="StarshipsCreate__container">
+    <div className={styles.container}>
       <Button onClick={handleOnClick} disabled={isLoading}>
-        Starships Create 📀
+        {'Starships Create 📀'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={isError} />
       <ModalInputsUpdate<Omit<any, 'id'>> // TODO: set Entity Starships
         inputs={CREATE_INPUTS}
         title={'STARSHIPS CREATE 📀'}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
       />

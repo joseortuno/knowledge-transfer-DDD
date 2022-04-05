@@ -1,17 +1,17 @@
 import { FC, useMemo, useState } from 'react';
 import Button from '../button';
-import { usePeople } from '../../hooks/usePeople';
 import ErrorMessage from '../errorMessage';
-import PrintConsole from '../printConsole';
 import ModalInputsUpdate from '../modalInputsUpdate';
-import { SELECT_PEOPLE_INPUT } from '../../constants/people';
-import './styles.css';
 import { People } from '../../core/domain/people/models/people';
+import PrintConsole from '../printConsole';
+import { SELECT_PEOPLE_INPUT } from '../../constants/people';
+import { usePeople } from '../../hooks/usePeople';
+import styles from './styles.module.css';
 
 const PeopleSelect: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const {
-    data, getData, isLoading, isError, 
+    data, getData, loading, error,
   } = usePeople();
 
   const handleOnClick = () => {
@@ -23,7 +23,7 @@ const PeopleSelect: FC = () => {
   };
 
   const handleOnFinish = async ({ id }: { id: string }) => {
-    id && (await getData(id));
+    id && (await getData(Number(id)));
     setIsShow(false);
   };
 
@@ -40,15 +40,15 @@ const PeopleSelect: FC = () => {
   }, [data]);
 
   return (
-    <div className="PeopleSelect__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
-        People Select 🙆‍♀️
+    <div className={styles.container}>
+      <Button onClick={handleOnClick} disabled={loading}>
+        {'People Select 🙆‍♀️'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={error} />
       <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_PEOPLE_INPUT}
         title={'PEOPLE SELECT  🙆‍♀️ '}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
       />

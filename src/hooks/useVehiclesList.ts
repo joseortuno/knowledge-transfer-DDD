@@ -19,5 +19,5 @@ export const useVehiclesList = () => {
     }
   };
 
-  return { data, getData, isLoading, isError };
+  return { data, getData, loading: isLoading, error: isError };
 };

@@ -3,7 +3,7 @@ import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import UpdateDataModal from './selectedUpdate';
 import SelectDataModal from './selectData';
-import './styles.css';
+import styles from './styles.module.css';
 
 const VehiclesUpdate: FC = () => {
   const [id, setId] = useState<number | null>(null);
@@ -28,15 +28,15 @@ const VehiclesUpdate: FC = () => {
 
   const handleOnResetId = () => {
     setId(null);
-  }
+  };
 
   return (
-    <div className="VehiclesUpdate__container">
+    <div className={styles.container}>
       {/* ⚠️ Remove disabled */}
       <Button onClick={handleOnClick} disabled={true}>
-        Vehícles Update 🧨
+        {'Vehícles Update 🧨'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={isError} />
       <SelectDataModal
         isShow={isShowSelect}
         onIsShow={handleOnIsShow}

@@ -1,13 +1,15 @@
-import { FC } from 'react';
-import './styles.css';
+import { VFC } from 'react';
+import styles from './styles.module.css';
 
 interface ErrorMessageProps {
-  isError: boolean;
+  error: boolean;
 }
 
-const ErrorMessage: FC<ErrorMessageProps> = ({ isError }) => {
+const ErrorMessage: VFC<ErrorMessageProps> = ({ error }) => {
   return (
-    <div className="ErrorMessage__container">{isError && <div>❌</div>}</div>
+    <div className={styles.container}>
+      {error && <div>{'❌'}</div>}
+    </div>
   );
 };
 

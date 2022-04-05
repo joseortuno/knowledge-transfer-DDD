@@ -3,7 +3,7 @@ import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import UpdateDataModal from './selectedUpdate';
 import SelectDataModal from './selectData';
-import './styles.css';
+import styles from './styles.module.css';
 
 const PeopleUpdate: FC = () => {
   const [id, setId] = useState<number | null>(null);
@@ -28,16 +28,16 @@ const PeopleUpdate: FC = () => {
 
   const handleOnResetId = () => {
     setId(null);
-  }
+  };
 
   return (
-    <div className="PeopleUpdate__container">
+    <div className={styles.container}>
       <Button onClick={handleOnClick}>
-        People Update 🏀
+        {'People Update 🏀'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={isError} />
       <SelectDataModal
-        isShow={isShowSelect}
+        show={isShowSelect}
         onIsShow={handleOnIsShow}
         onId={handleOnId}
         onError={handleOnError}

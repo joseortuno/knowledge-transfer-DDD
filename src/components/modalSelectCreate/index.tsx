@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal, { ModalProps } from '../modal';
-import './styles.css';
+import styles from './styles.module.css';
 
 export interface OptionsType {
   value: number;
@@ -15,7 +15,7 @@ interface ModalSelectCreateProps extends Omit<ModalProps, 'onFinish'> {
 const ModalSelectCreate = ({
   title,
   options,
-  isShow,
+  show,
   onClose,
   onFinish,
   ...props
@@ -40,10 +40,10 @@ const ModalSelectCreate = ({
   return (
     <Modal
       title={title}
-      isShow={isShow}
+      show={show}
       onClose={handleOnClose}
       onFinish={handleOnFinish}
-      className={'ModalSelectCreate__container'}
+      className={styles.container}
       {...props}
     >
       {!!options.length && (

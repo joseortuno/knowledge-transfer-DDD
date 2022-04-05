@@ -6,12 +6,12 @@ import ModalInputsUpdate from '../modalInputsUpdate';
 import { SELECT_PLANETS_INPUT } from '../../constants/planets';
 import { usePlanets } from '../../hooks/usePlanets';
 import { usePlanetsList } from '../../hooks/usePlanetsList';
-import './styles.css';
 import { People } from '../../core/domain/people/models/people';
+import styles from './styles.module.css';
 
 const PlanetsRemove: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
-  const { removeData, isLoading, isError } = usePlanets();
+  const { removeData, loading, error } = usePlanets();
   const { data, getData } = usePlanetsList();
 
   const handleOnClick = () => {
@@ -41,15 +41,15 @@ const PlanetsRemove: FC = () => {
   }, [data]);
 
   return (
-    <div className="PlanetsRemove__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
-        Planets Remove 🎈
+    <div className={styles.container}>
+      <Button onClick={handleOnClick} disabled={loading}>
+        {'Planets Remove 🎈'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={error} />
       <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_PLANETS_INPUT}
         title={'INPUT SELECT 🎥'}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
       />

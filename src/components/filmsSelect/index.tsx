@@ -6,7 +6,7 @@ import PrintConsole from '../printConsole';
 import { Film } from '../../core/domain/films/model/filmEntity';
 import ModalInputsUpdate from '../modalInputsUpdate';
 import { SELECT_FILMS_INPUT } from '../../constants/films';
-import './styles.css';
+import styles from './styles.module.css';
 
 const FilmSelect: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -40,15 +40,15 @@ const FilmSelect: FC = () => {
   }, [data]);
 
   return (
-    <div className="Film__container">
+    <div className={styles.container}>
       <Button onClick={handleOnClick} disabled={isLoading}>
-        Film Select 🎥
+        {'Film Select 🎥'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={isError} />
       <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_FILMS_INPUT}
         title={'INPUT SELECT 🎥'}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
       />

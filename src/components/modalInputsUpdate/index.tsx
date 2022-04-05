@@ -1,6 +1,6 @@
 import { HTMLInputTypeAttribute, useState } from 'react';
 import Modal, { ModalProps } from '../modal';
-import './styles.css';
+import styles from './styles.module.css';
 
 export interface InputsType<T> {
   name: keyof T;
@@ -13,10 +13,10 @@ interface ModalInputsUpdateProps<T> extends Omit<ModalProps, 'onFinish'> {
   onFinish: (values: T) => void;
 }
 
-const ModalInputsUpdate = <T extends {}>({
+const ModalInputsUpdate = <T extends Record<string, unknown>>({
   title,
   inputs,
-  isShow,
+  show,
   onClose,
   onFinish,
   ...props
@@ -44,10 +44,10 @@ const ModalInputsUpdate = <T extends {}>({
   return (
     <Modal
       title={title}
-      isShow={isShow}
+      show={show}
       onClose={handleOnClose}
       onFinish={handleOnFinish}
-      className={'ModalInputsUpdate__container'}
+      className={styles.container}
       {...props}
     >
       {inputs.map(({ name, type, value }, key) => {

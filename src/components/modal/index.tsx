@@ -1,27 +1,27 @@
 import { FC } from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 
 export interface ModalProps {
-  isShow: boolean;
+  show: boolean;
   title: string;
   onClose: () => void;
   onFinish: () => void;
   className?: string;
   textSubmit?: string;
-  isLoading?: boolean;
+  loading?: boolean;
 }
 
 const Modal: FC<ModalProps> = ({
-  isShow,
+  show,
   title,
   onClose,
   onFinish,
   className,
   textSubmit = 'Send',
-  isLoading = false,
+  loading = false,
   children,
 }) => {
-  if (!isShow) {
+  if (!show) {
     return null;
   }
 
@@ -31,17 +31,17 @@ const Modal: FC<ModalProps> = ({
   };
 
   return (
-    <div className={'Modal__container'}>
-      <div className={'Modal__content'}>
-        <div className={'Modal__header'}>
-          <h4 className={'Modal__title'}>{title}</h4>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <h4 className={styles.title}>{title}</h4>
         </div>
-        <div className={`Modal__body ${className}`}>{children}</div>
-        <div className={'Modal__footer'}>
-          <button onClick={onClose}>Close</button>
-          <button onClick={handleOnFinish} disabled={isLoading}>
+        <div className={`${styles.body} ${className}`}>{children}</div>
+        <div className={styles.footer}>
+          <button onClick={handleOnFinish} disabled={loading}>
             {textSubmit}
           </button>
+          <button onClick={onClose}>{'Close'}</button>
         </div>
       </div>
     </div>

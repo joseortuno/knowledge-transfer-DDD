@@ -1,5 +1,5 @@
-import { filmsPath } from 'core/endpoints/films';
-import { api } from 'core/services/api';
+import { filmsPath } from '../../../endpoints/films';
+import { api } from '../../../services/api';
 import FilmEntity, { Film, FilmUnparser } from '../model/filmEntity';
 
 const GetFilm = async (id: string): Promise<Film> => {

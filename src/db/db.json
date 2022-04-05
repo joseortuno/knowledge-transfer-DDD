@@ -343,6 +343,24 @@
         "skin_color": "light",
         "url": "https://www.swapi.tech/api/people/35"
       }
+    },
+    {
+      "id": 286202808,
+      "description": "erwerawer",
+      "properties": {
+        "birth_year": "werwerwq",
+        "created": "werweqrwq",
+        "edited": "werqwer",
+        "eye_color": "werwqerw",
+        "gender": "werwqer",
+        "hair_color": "werwerwqe",
+        "height": "21",
+        "homeworld": "fsdfsd",
+        "mass": "2",
+        "name": "fsdfsa",
+        "skin_color": "sdfsd",
+        "url": "sdfsdf"
+      }
     }
   ],
   "planets": [

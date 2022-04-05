@@ -1,5 +1,5 @@
-import { peopleUpdatePath } from 'core/endpoints/people';
-import { api } from 'core/services/api';
+import { peopleUpdatePath } from '../../../endpoints/people';
+import { api } from '../../../services/api';
 import PeopleEntity from '../entities/peopleEntity';
 import { payloadToPeople } from '../mappers/payloadToPeople';
 import { peopleToPayload } from '../mappers/peopleToPayload';

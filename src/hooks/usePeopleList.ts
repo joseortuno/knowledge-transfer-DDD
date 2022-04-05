@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { People } from 'core/domain/people/models/people';
-import GetPeopleList from 'core/domain/people/repositories/getPeopleList';
+import { People } from '../core/domain/people/models/people';
+import GetPeopleList from '../core/domain/people/repositories/getPeopleList';
 
 export const usePeopleList = () => {
   const [isError, setIsError] = useState<boolean>(false);
@@ -21,5 +21,5 @@ export const usePeopleList = () => {
     }
   };
 
-  return { data, getData, isLoading, isError };
+  return { data, getData, loading: isLoading, error: isError };
 };

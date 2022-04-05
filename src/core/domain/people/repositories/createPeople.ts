@@ -1,6 +1,6 @@
-import { peopleCreatePath } from 'core/endpoints/people';
-import { createId } from 'utils/getId';
-import { api } from 'core/services/api';
+import { peopleCreatePath } from '../../../endpoints/people';
+import { createId } from '../../../../utils/getId';
+import { api } from '../../../services/api';
 import PeopleEntity from '../entities/peopleEntity';
 import { payloadToPeople } from '../mappers/payloadToPeople';
 import { peopleToPayload } from '../mappers/peopleToPayload';

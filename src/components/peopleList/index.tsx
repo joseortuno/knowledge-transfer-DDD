@@ -4,11 +4,11 @@ import { usePeopleList } from '../../hooks/usePeopleList';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
 import { People } from '../../core/domain/people/models/people';
-import './styles.css';
+import styles from './styles.module.css';
 
 const PeopleList: FC = () => {
   const {
-    data, getData, isLoading, isError, 
+    data, getData, loading, error, 
   } = usePeopleList();
 
   const handleOnClick = async () => {
@@ -18,7 +18,7 @@ const PeopleList: FC = () => {
   const element = useMemo(() => {
     return (
       !!data.length && (
-        <PrintConsole<People[]>
+        <PrintConsole<Readonly<People[]>>
           title={'PEOPLE LIST 🚨'}
           isData={!!data.length}
           data={data}
@@ -28,11 +28,11 @@ const PeopleList: FC = () => {
   }, [data]);
 
   return (
-    <div className="PeopleList__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
-        People List 👨‍👨‍👧‍👦
+    <div className={styles.container}>
+      <Button onClick={handleOnClick} disabled={loading}>
+        {'People List 👨‍👨‍👧‍👦'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={error} />
       {element}
     </div>
   );

@@ -7,11 +7,11 @@ import PrintConsole from '../printConsole';
 import ModalInputsUpdate from '../modalInputsUpdate';
 import { SELECT_PEOPLE_INPUT } from '../../constants/people';
 import { People } from '../../core/domain/people/models/people';
-import './styles.css';
+import styles from './styles.module.css';
 
 const PeopleRemove: FC = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
-  const { removeData, isLoading, isError } = usePeople();
+  const { removeData, loading, error } = usePeople();
   const { data, getData } = usePeopleList();
 
   const handleOnClick = () => {
@@ -31,7 +31,7 @@ const PeopleRemove: FC = () => {
   const element = useMemo(() => {
     return (
       !!data.length && (
-        <PrintConsole<People[]>
+        <PrintConsole<Readonly<People[]>>
           title={'PEOPLE LIST AFTER REMOVE ACTION 🎳'}
           isData={!!data.length}
           data={data}
@@ -41,15 +41,15 @@ const PeopleRemove: FC = () => {
   }, [data]);
 
   return (
-    <div className="PeopleRemove__container">
-      <Button onClick={handleOnClick} disabled={isLoading}>
-        People Remove 🔥
+    <div className={styles.container}>
+      <Button onClick={handleOnClick} disabled={loading}>
+        {'People Remove 🔥'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={error} />
       <ModalInputsUpdate<{ id: string }>
         inputs={SELECT_PEOPLE_INPUT}
         title={'INPUT SELECT 🎥'}
-        isShow={isShow}
+        show={isShow}
         onClose={handleOnClose}
         onFinish={handleOnFinish}
       />

@@ -1,26 +1,28 @@
-import { FC, useEffect } from "react";
-import { usePeopleList } from "../../hooks/usePeopleList";
-import ModalSelectCreate, { OptionsType } from "../modalSelectCreate";
+import { FC, useEffect } from 'react';
+import { usePeopleList } from '../../hooks/usePeopleList';
+import ModalSelectCreate, { OptionsType } from '../modalSelectCreate';
 
 interface SelectDataModalProps {
-  isShow: boolean;
+  show: boolean;
   onIsShow: (show: boolean) => void;
   onId: (id: number) => void;
   onError: (isError: boolean) => void;
 }
 
-const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onError }) => {
+const SelectDataModal: FC<SelectDataModalProps> = ({
+  show, onIsShow, onId, onError, 
+}) => {
   const {
-    data, getData, isLoading, isError, 
+    data, getData, loading, error, 
   } = usePeopleList();
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [show]);
 
   useEffect(() => {
-    onError(isError);
-  }, [isError]);
+    onError(error);
+  }, [error]);
 
   const handleOnClose = (): void => {
     onIsShow(false);
@@ -41,13 +43,13 @@ const SelectDataModal: FC<SelectDataModalProps> = ({ isShow, onIsShow, onId, onE
     <ModalSelectCreate
       title={'PEOPLE Update 🏀 (1/2)'}
       options={getOptions()}
-      isShow={isShow}
+      show={show}
       onClose={handleOnClose}
       onFinish={handleOnFinish}
       textSubmit={'Select'}
-      isLoading={isLoading}
+      loading={loading}
     />
-  )
-}
+  );
+};
 
 export default SelectDataModal;

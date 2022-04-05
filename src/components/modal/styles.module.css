@@ -1,4 +1,4 @@
-.Modal__container {
+.container {
   position: fixed;
   left: 0;
   top: 0;
@@ -10,21 +10,27 @@
   justify-content: center;
 }
 
-.Modal__content {
+.content {
   width: 500px;
   background-color: #fff;
   border: 2px solid #fe4164;
 }
 
-.Modal__header , .Modal__footer {
+.header , .footer {
   padding: 10px;
 }
 
-.Modal__title {
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+}
+
+.title {
   margin: 0;
 }
 
-.Modal__body {
+.body {
   padding: 10px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;

@@ -3,7 +3,7 @@ import Button from '../button';
 import ErrorMessage from '../errorMessage';
 import PrintConsole from '../printConsole';
 import { useSpeciesList } from '../../hooks/useSpeciesList';
-import './styles.css';
+import styles from './styles.module.css';
 
 const SpeciesList: FC = () => {
   const {
@@ -27,11 +27,11 @@ const SpeciesList: FC = () => {
   }, [data]);
 
   return (
-    <div className="SpeciesList__container">
+    <div className={styles.container}>
       <Button onClick={handleOnClick} disabled={isLoading}>
-        Species List 👽
+        {'Species List 👽'}
       </Button>
-      <ErrorMessage isError={isError} />
+      <ErrorMessage error={isError} />
       {element}
     </div>
   );
