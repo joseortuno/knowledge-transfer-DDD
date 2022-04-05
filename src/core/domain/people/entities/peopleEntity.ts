@@ -1,4 +1,8 @@
-import { People } from "../models/people";
+import { People } from '../models/people';
+import { PeopleParser } from '../models/peopleParser';
+import EyeColorValueObject from './eyeColorValueObject';
+import HairColorValueObject from './hairColorValueObject';
+import SkinColorValueObject from './skinColorValueObject';
 
 const PeopleEntity = ({
   id,
@@ -15,21 +19,25 @@ const PeopleEntity = ({
   name,
   skinColor,
   url,
-}: People): Readonly<People> => {
+}: PeopleParser): Readonly<People> => {
+  const _eyeColor = EyeColorValueObject(eyeColor);
+  const _hairColor = HairColorValueObject(hairColor);
+  const _skinColor = SkinColorValueObject(skinColor);
+
   return Object.freeze({
     id,
     description,
     birthYear,
     created,
     edited,
-    eyeColor,
+    eyeColor: _eyeColor,
     gender,
-    hairColor,
+    hairColor: _hairColor,
     height,
     homeworld,
     mass,
     name,
-    skinColor,
+    skinColor: _skinColor,
     url,
   });
 };

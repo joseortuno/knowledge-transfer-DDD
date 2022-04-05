@@ -1,6 +1,6 @@
 import { EyeColors } from './eyeColors';
-import { HairColor } from './hairColor';
-import { SkinColor } from './skinColor';
+import { HairColors } from './hairColors';
+import { SkinColors } from './skinColors';
 
 export interface People {
   id: number;
@@ -10,11 +10,11 @@ export interface People {
   edited: string;
   eyeColor: EyeColors;
   gender: string;
-  hairColor: HairColor;
+  hairColor: HairColors;
   height: number | null;
   homeworld: string;
   mass: number | null;
   name: string;
-  skinColor: SkinColor;
+  skinColor: SkinColors;
   url: string;
 }

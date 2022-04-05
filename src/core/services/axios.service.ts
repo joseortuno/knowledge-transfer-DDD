@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosError, AxiosRequestConfig } from 'axios';
-import { basePath } from '../../endpointsPath/general';
+import { serverUrl } from '../baseUrls/serverUrl';
 
-const baseURL = basePath();
+const baseURL = serverUrl();
 const apiInstance: AxiosInstance = axios.create({
   baseURL,
 });
@@ -19,7 +19,7 @@ apiInstance.interceptors.response.use(
   },
 );
 
-export const getData = async <T extends {}> (url: string): Promise<T> => {
+export const getData = async <T>(url: string): Promise<T> => {
   const options: AxiosRequestConfig = { 
     url: url,
     method: 'GET',
@@ -27,7 +27,7 @@ export const getData = async <T extends {}> (url: string): Promise<T> => {
   return apiInstance(options) as unknown as T;
 };
 
-export const createData = async <T extends {}> (url: string, data: T) => {
+export const createData = async <T>(url: string, data: T) => {
   const options: AxiosRequestConfig = { 
     url: url,
     method: 'POST',
@@ -36,7 +36,7 @@ export const createData = async <T extends {}> (url: string, data: T) => {
   return await apiInstance(options) as unknown as T;
 };
 
-export const updateData = async <T extends {}>  (url: string, data: T): Promise<T> => {
+export const updateData = async <T>(url: string, data: T): Promise<T> => {
   const options: AxiosRequestConfig = { 
     url: url,
     method: 'PATCH',

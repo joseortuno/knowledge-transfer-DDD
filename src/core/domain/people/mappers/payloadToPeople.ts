@@ -1,5 +1,5 @@
-import { People } from "../models/people"
-import { PeopleUnparser } from "../models/peopleUnparser"
+import { PeopleParser } from '../models/peopleParser';
+import { PeopleUnparser } from '../models/peopleUnparser';
 
 export const payloadToPeople = ({
   id,
@@ -17,8 +17,8 @@ export const payloadToPeople = ({
     name = '',
     skin_color = '',
     url = '',
-  }
-}: PeopleUnparser): People => {
+  },
+}: PeopleUnparser): PeopleParser => {
   return {
     id,
     description,
@@ -34,5 +34,5 @@ export const payloadToPeople = ({
     name,
     skinColor: skin_color,
     url,
-  }
-}
+  };
+};

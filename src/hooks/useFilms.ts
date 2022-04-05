@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Film } from '../core/domain/films/model/filmEntity';
-import GetFilm from '../core/domain/films/repositories/getFilm';
+import { Film } from 'core/domain/films/model/filmEntity';
+import GetFilm from 'core/domain/films/repositories/getFilm';
 
 export const useFilms = () => {
   const [isError, setIsError] = useState<boolean>(false);

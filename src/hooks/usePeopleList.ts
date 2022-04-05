@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { People } from '../core/domain/people/models/people';
-import GetPeopleList from '../core/domain/people/repositories/getPeopleList';
+import { People } from 'core/domain/people/models/people';
+import GetPeopleList from 'core/domain/people/repositories/getPeopleList';
 
 export const usePeopleList = () => {
   const [isError, setIsError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [data, setData] = useState<People[]>([]);
+  const [data, setData] = useState<Readonly<People[]>>([]);
 
   const getData = async (): Promise<void> => {
     setIsLoading(true);

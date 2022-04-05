@@ -1,5 +1,5 @@
-import { People } from "../models/people"
-import { PeopleUnparser } from "../models/peopleUnparser"
+import { People } from '../models/people';
+import { PeopleUnparser } from '../models/peopleUnparser';
 
 export const peopleToPayload = ({
   id,
@@ -37,6 +37,6 @@ export const peopleToPayload = ({
       name,
       skin_color: skinColor,
       url,
-    }
-  }
-}
+    },
+  };
+};

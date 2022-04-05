@@ -1,7 +1,3 @@
-import { EyeColors } from './eyeColors';
-import { HairColor } from './hairColor';
-import { SkinColor } from './skinColor';
-
 export interface PeopleUnparser {
   id: number;
   description: string;
@@ -9,14 +5,14 @@ export interface PeopleUnparser {
     birth_year: string;
     created: string;
     edited: string;
-    eye_color: EyeColors;
+    eye_color: string;
     gender: string;
-    hair_color: HairColor;
+    hair_color: string;
     height: string | null;
     homeworld: string;
     mass: string | null;
     name: string;
-    skin_color: SkinColor;
+    skin_color: string;
     url: string;
   };
 }

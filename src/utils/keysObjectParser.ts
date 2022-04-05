@@ -18,7 +18,7 @@ const isObject = function (o: any) {
   return o === Object(o) && !isArray(o) && typeof o !== 'function';
 };
 
-const keyObjectParser = function (o: any, callback: Function) {
+const keyObjectParser = function (o: any, callback: any) {
   if (isObject(o)) {
     const n: any = {};
 
@@ -39,8 +39,8 @@ const keyObjectParser = function (o: any, callback: Function) {
 
 export const keysToCamelParser = (object: any) => {
   return keyObjectParser(object, toCamel);
-}
+};
 
 export const keysToSnakeParser = (object: any) => {
   return keyObjectParser(object, toSnake);
-}
+};

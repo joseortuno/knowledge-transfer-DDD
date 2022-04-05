@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { People } from '../core/domain/people/models/people';
-import { NewPeople } from '../core/domain/people/models/newPeople';
-import CreatePeople from '../core/domain/people/repositories/createPeople';
-import GetPeople from '../core/domain/people/repositories/getPeople';
-import RemovePeople from '../core/domain/people/repositories/removePeople';
-import UpdatePeople from '../core/domain/people/repositories/updatePeople';
+import { People } from 'core/domain/people/models/people';
+import { NewPeople } from 'core/domain/people/models/newPeople';
+import CreatePeople from 'core/domain/people/repositories/createPeople';
+import GetPeople from 'core/domain/people/repositories/getPeople';
+import RemovePeople from 'core/domain/people/repositories/removePeople';
+import UpdatePeople from 'core/domain/people/repositories/updatePeople';
 
 export const usePeople = () => {
   const [isError, setIsError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [data, setData] = useState<People | null>(null);
+  const [data, setData] = useState<Readonly<People> | null>(null);
 
   const getData = async (id: number): Promise<void> => {
     setIsLoading(true);
@@ -61,5 +61,13 @@ export const usePeople = () => {
     }
   };
   
-  return { data, getData, createData, updateData, removeData, isLoading, isError };
+  return { 
+    data, 
+    getData, 
+    createData, 
+    updateData, 
+    removeData, 
+    loading: isLoading, 
+    error: isError, 
+  };
 };

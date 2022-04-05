@@ -1,5 +1,5 @@
-import { peoplePath } from '../../../../endpointsPath/people';
-import { api } from '../../../services/api';
+import { peoplePath } from 'core/endpoints/people';
+import { api } from 'core/services/api';
 
 const RemovePeople = async (id: number): Promise<void> => {
   const url = peoplePath(id);

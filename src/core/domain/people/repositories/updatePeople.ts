@@ -1,5 +1,5 @@
-import { peopleUpdatePath } from '../../../../endpointsPath/people';
-import { api } from '../../../services/api';
+import { peopleUpdatePath } from 'core/endpoints/people';
+import { api } from 'core/services/api';
 import PeopleEntity from '../entities/peopleEntity';
 import { payloadToPeople } from '../mappers/payloadToPeople';
 import { peopleToPayload } from '../mappers/peopleToPayload';
@@ -12,7 +12,7 @@ const UpdatePeople = async (
   data: NewPeople,
 ): Promise<Readonly<People>> => {
   const url = peopleUpdatePath(id);
-  const peopleUnparser = peopleToPayload({...data, id })
+  const peopleUnparser = peopleToPayload({ ...data, id });
   const response = await api.update<PeopleUnparser>(url, peopleUnparser);
   const peopleParser = payloadToPeople(response);
   return PeopleEntity(peopleParser);
